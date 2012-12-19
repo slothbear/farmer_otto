@@ -1,4 +1,5 @@
 require 'yaml'
+require 'java'
 
 class FarmerOtto
 
@@ -59,7 +60,12 @@ class FarmerOtto
   end
 
   def pause?
-    false
+    sleep 1 while caps_lock?
+  end
+
+  def caps_lock?
+    tk = java.awt.Toolkit.getDefaultToolkit
+    tk.getLockingKeyState(java.awt.event.KeyEvent::VK_CAPS_LOCK)
   end
 
 end
