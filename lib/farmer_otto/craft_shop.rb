@@ -1,3 +1,3 @@
-class FarmerOtto
+class CraftShop
 
 end
