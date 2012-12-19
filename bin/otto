@@ -27,4 +27,5 @@ else
   end
 end
 
-puts "processing: #{script}"
+otto = FarmerOtto.new
+otto.run_script(script)
