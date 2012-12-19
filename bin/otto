@@ -1,5 +1,14 @@
 #!/usr/bin/env ruby
 
 require 'farmer_otto'
+require 'optparse'
 
-puts FarmerOtto.saluton
+options = Hash.new
+option_parser = OptionParser.new do |opts|
+  program = File.basename($PROGRAM_NAME)
+  opts.banner = "Ask Farmer Otto to perform the tasks in a script file.
+
+usage: #{program} [options] script_file
+
+"
+end.parse!
