@@ -1,4 +1,4 @@
-farms = :home, :english, :lighthouse, :winter, :hawaiian, :jade, :haunted
+farms = :home, :english
 
 farms.each do |farm|
   travel_to farm
