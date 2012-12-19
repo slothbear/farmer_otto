@@ -1,5 +1,12 @@
 routes:
   english: [right, right, right, spot3]
+  lighthouse: [right, right, spot3]
+  winter: [right, spot3]
+  hawaiian: [spot3]
+  jade: [spot1]
+  haunted: [spot_featured]
+  home: [spot_featured]
+
 
 travel_button: [750, 22]
 right: [738, 450]
