@@ -33,8 +33,33 @@ class FarmerOtto
     @settings.fetch('routes').fetch(farm.to_s)
   end
 
-  def click(spot, wait=0)
-    puts "click: #{spot} and wait: #{wait}"
+  # spot is a named spot on the farm (@settings from farm.yaml)
+  # offset is the x/y offset from the farm's origin
+  # point is the absolute x/y on the screen to click
+
+  def click(spot, wait_time=0.0)
+    pause?
+    offset = @settings.fetch(spot.to_s)
+
+    point= [origin[0]+offset[0], origin[1]+offset[1]]
+    puts "click_at: #{spot}: #{point}"
+
+    # @robot.mouseMove(spot[0], spot[1])
+    # @robot.delay(200+rand(25))
+    # @robot.mousePress(java.awt.event.InputEvent::BUTTON1_MASK)
+    # @robot.mouseRelease(java.awt.event.InputEvent::BUTTON1_MASK)
+    # @robot.delay(100)
+    # @robot.delay(rand(100))
+
+    sleep wait_time
+  end
+
+  def origin # fake
+    [0, 0]
+  end
+
+  def pause?
+    false
   end
 
 end
