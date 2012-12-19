@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require 'farmer_otto'
+
+puts FarmerOtto.saluton
