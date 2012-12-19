@@ -11,4 +11,20 @@ option_parser = OptionParser.new do |opts|
 usage: #{program} [options] script_file
 
 "
-end.parse!
+end
+option_parser.parse!
+
+if ARGV.empty?
+  puts 'error: Otto needs a script file name'
+  puts
+  puts option_parser.help
+  exit 1
+else
+  script = ARGV[0]
+  unless File.exist?(script)
+    puts "script file '#{script}' not found"
+    exit 1
+  end
+end
+
+puts "processing: #{script}"
