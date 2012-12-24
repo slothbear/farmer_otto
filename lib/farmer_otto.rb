@@ -27,7 +27,6 @@ class FarmerOtto
       click step, 1.0
     end
     sleep 14.0
-    click :close_farm_cash_offer
   end
 
   def craftshop(*args)
