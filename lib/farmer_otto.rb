@@ -1,10 +1,14 @@
 require 'yaml'
 require 'java'
 
+FARMVILLE_COM_WIDTH = 770
+FARMVILLE_COM_HEIGHT = 600
+
 class FarmerOtto
 
   def initialize
     @settings = YAML::load_file('farm.yaml')
+    @robot = java.awt.Robot.new
   end
 
   def run_script(path)
@@ -55,8 +59,28 @@ class FarmerOtto
     sleep wait_time
   end
 
-  def origin # fake
-    [0, 0]
+  def origin
+    @origin ||= find_farm
+  end
+
+  def find_farm
+    dim = java.awt.Toolkit.getDefaultToolkit.getScreenSize
+    screen = snapshot(0, 0, dim.getWidth, dim.getHeight)
+    border_color = java.awt.Color.new(19, 15, 11).getRGB
+
+    (0...dim.getHeight-FARMVILLE_COM_HEIGHT).each do |row|
+      row_pixels = screen.getRGB(0,row,dim.getWidth,1,nil,0,dim.getWidth)
+      (0..dim.getWidth-FARMVILLE_COM_WIDTH).each do |column|
+        return [column-2, row+1] if row_pixels[column, 400].all? {|pixel| pixel == border_color}
+      end
+    end
+
+    raise "Unable to locate farm on the screen."
+  end
+
+  def snapshot(rx, ry, rw, rh)
+    field = java.awt.Rectangle.new(rx,ry,rw,rh)
+    @robot.createScreenCapture(field)
   end
 
   def pause?
