@@ -12,6 +12,8 @@ class FarmerOtto
   end
 
   def run_script(path)
+    puts "sleeping for 5 seconds..."
+    sleep 5.0
     instance_eval(File.read(path), path)
   end
 
@@ -49,12 +51,13 @@ class FarmerOtto
     point = [origin[0]+offset[0], origin[1]+offset[1]]
     puts "click: #{spot}: #{point.inspect}"
 
-    # @robot.mouseMove(spot[0], spot[1])
-    # @robot.delay(200+rand(25))
-    # @robot.mousePress(java.awt.event.InputEvent::BUTTON1_MASK)
-    # @robot.mouseRelease(java.awt.event.InputEvent::BUTTON1_MASK)
-    # @robot.delay(100)
-    # @robot.delay(rand(100))
+    @robot.mouseMove(point[0], point[1])
+    @robot.delay(200+rand(25))
+    @robot.mousePress(java.awt.event.InputEvent::BUTTON1_MASK)
+    @robot.delay(25)
+    @robot.mouseRelease(java.awt.event.InputEvent::BUTTON1_MASK)
+    @robot.delay(100)
+    @robot.delay(rand(100))
 
     sleep wait_time
   end
