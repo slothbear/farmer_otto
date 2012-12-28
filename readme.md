@@ -35,6 +35,8 @@ You can tell Farmer Otto to perform *all* of those steps for you with this small
 farms = :home, :english, :lighthouse, :winter,
         :hawaiian, :jade, :haunted
 
+current_farm :home
+
 farms.each do |farm|
   travel_to farm
 
