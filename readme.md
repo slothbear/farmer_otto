@@ -13,7 +13,8 @@ farms = :home, :english, :lighthouse, :winter,
 
 farms.each do |farm|
   travel_to farm
-  craftshop :open
+
+  craftshop :look_inside
   3.times { craftshop :get_it }
   craftshop :drill_bit
   craftshop :copper_tube

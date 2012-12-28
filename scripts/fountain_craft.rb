@@ -1,12 +1,15 @@
 farms = :home, :english, :lighthouse, :winter,
-  :hawaiian, :jade, :haunted
+        :hawaiian, :jade, :haunted
+
+current_farm :home
 
 farms.each do |farm|
   travel_to farm
-  click :close_farm_cash_offer
 
   craftshop :look_inside
   3.times { craftshop :get_it }
-  craftshop :craft, :drill_bit, :copper_tube, :cut_bamboo
+  craftshop :drill_bit
+  craftshop :copper_tube
+  craftshop :cut_bamboo
   craftshop :close
 end
