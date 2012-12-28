@@ -8,14 +8,17 @@ For instance, you might want to craft the items required to fully build your Wis
 You can tell Farmer Otto to perform *all* of those steps for you with this small program:
 
 ````
-farms = :home, :english, :lighthouse, :winter, :hawaiian
+farms = :home, :english, :lighthouse, :winter,
+        :hawaiian, :jade, :haunted
 
 farms.each do |farm|
   travel_to farm
-  craftshop open
-  3.times { craftshop get_it }
-  craftshop craft, :drill_bit, :copper_tube, :cut_bamboo
-  craftshop close
+  craftshop :open
+  3.times { craftshop :get_it }
+  craftshop :drill_bit
+  craftshop :copper_tube
+  craftshop :cut_bamboo
+  craftshop :close
 end
 ````
 
