@@ -18,15 +18,20 @@ class FarmerOtto
   end
 
   def travel_to(farm)
+    return if farm == @current_farm
     puts "travelling to #{farm}"
-    @current_farm ||= farm
-    return farm if farm == @current_farm
 
     click :travel_button
     get_route_to(farm).each do |step|
       click step, 1.0
     end
+
+    @current_farm = farm
     sleep 14.0
+  end
+
+  def current_farm(farm)
+    @current_farm = farm
   end
 
   def craftshop(*args)
