@@ -48,7 +48,7 @@ class FarmerOtto
     offset = @settings.fetch(spot.to_s)
 
     point = [origin[0]+offset[0], origin[1]+offset[1]]
-    puts "click: #{spot}: #{point.inspect}"
+    puts "click #{spot}: #{point.inspect}"
 
     @robot.mouseMove(point[0], point[1])
     @robot.delay(200+rand(25))
