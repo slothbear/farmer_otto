@@ -1,10 +1,8 @@
 Farmer Otto
 ===
 
+#### Farmer Otto thanks these great projects:
 <table>
-  <tr>
-    <th>thanks to:</th><th></th><th></th>
-  </tr>
   <tr>
     <td>
       <a href="http://www.ruby-lang.org/en/">
@@ -21,11 +19,6 @@ Farmer Otto
       </a>
     </td>
   </tr>
-  <tr>
-    <td>2</td>
-    <td>Albert Einstein</td>
-    <td>Nearly as awesome</td>
-  </tr>
 </table>
 
 Farmer Otto is a set of tools for automating common tasks in Farmville.
@@ -33,6 +26,8 @@ Farmer Otto is a set of tools for automating common tasks in Farmville.
 For instance, you might want to craft the items required to fully build your
 [Wishing Fountain](http://farmville.wikia.com/wiki/Wishing_Fountain).
 You'll need 546 drill bits, 273 copper tubes, and 273 cut bamboos. That's a lot of clicking *Make It* and *Get It*. For top production, you'll also want to craft on all of your farms. That's a lot of coordinated clicking to move through all the farms.
+
+Maybe you're crazed and you want to build Wishing Fountains on each of your seven farms. That would require 7,644 crafted items.
 
 You can tell Farmer Otto to perform *all* of those steps for you with this small script:
 
@@ -58,12 +53,11 @@ Farmer Otto uses the conventions of the Ruby programming language to specify wha
 
 Still too hard? Let me know; perhaps we can make it even simpler.  If someone else has already written a script for your task, you might not have to learn anything -- just run it.
 
-prerequisites
-===
+## prerequisites
 
 0. Java 5 or later
 0. JRuby 1.6.5.1 or later
-0. craftshop locations
+0. craftshop locations (`farm.yaml`)
 0. sufficient bushels for full run, per farm:
   * 3 raspberry, 2 pumpkin, 1 apple wood
   * 3 wheat, 3 spinach, 1 milk
