@@ -31,11 +31,11 @@ class FarmerOtto
   end
 
   def current_farm(farm)
-    @current_farm = farm
+    @current_farm = farm || :home
   end
 
-  def craftshop(*args)
-    puts "craft shop performing: #{args.inspect}"
+  def craftshop(request)
+    puts "craftshop (#{@current_farm}: #{request})"
   end
 
   private
