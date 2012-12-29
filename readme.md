@@ -31,7 +31,7 @@ Maybe you're crazed and you want to build Wishing Fountains on each of your seve
 
 You can tell Farmer Otto to perform *all* of those steps for you with this script:
 
-````
+```ruby
 farms = :home, :english, :lighthouse, :winter, :hawaiian, :jade, :haunted
 current_farm :home
 
@@ -47,7 +47,7 @@ farms.each do |farm|
 
   craftshop :close
 end
-````
+```
 
 Farmer Otto uses the conventions of the Ruby programming language to specify what Otto should do. Some of it might look a little geeky, but there are only a few concepts you need to learn. Check the Wiki for tutorials.
 
