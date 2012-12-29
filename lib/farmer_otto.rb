@@ -3,6 +3,7 @@ require 'java'
 
 FARMVILLE_COM_WIDTH = 770
 FARMVILLE_COM_HEIGHT = 600
+CRAFT_WAIT = 10.0
 
 class FarmerOtto
 
@@ -43,6 +44,11 @@ class FarmerOtto
       zoom_out
       shop = @settings.fetch('craftshops').fetch(@current_farm.to_s)
       look_inside shop
+
+    when :get_it
+      click :craft_get_it_1
+      sleep CRAFT_WAIT
+
     when :close
       click :craftshop_close
       sleep 0.5
@@ -75,7 +81,7 @@ class FarmerOtto
     end
 
     point = [origin[0]+offset[0], origin[1]+offset[1]]
-    puts "click #{spot}: #{point.inspect}"
+    puts "#{point.inspect}"
 
     @robot.mouseMove(point[0], point[1])
     @robot.delay(200+rand(25))
