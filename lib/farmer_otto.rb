@@ -128,4 +128,10 @@ class FarmerOtto
     sleep 4.0
   end
 
+  def zoom_out
+    10.times { click :zoom_out }
+    # really need 8
+    # extra times don't hurt, might help: switch to FV window
+  end
+
 end

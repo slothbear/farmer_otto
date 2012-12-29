@@ -26,4 +26,6 @@ craftshops:
   haunted: [268, 115]
   mistletoe: [395, 268]
 
+zoom_out: [675, 460]
+
 craftshop_close: [732, 30]
