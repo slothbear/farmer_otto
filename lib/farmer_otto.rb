@@ -36,6 +36,20 @@ class FarmerOtto
 
   def craftshop(request)
     puts "craftshop (#{@current_farm}: #{request})"
+
+    case request
+
+    when :look_inside
+      zoom_out
+      shop = @settings.fetch('craftshops').fetch(@current_farm.to_s)
+      look_inside shop
+    when :close
+      click :craftshop_close
+      sleep 0.5
+
+    else
+      raise "unrecognized request: #{request}"
+    end
   end
 
   private
