@@ -32,8 +32,7 @@ Maybe you're crazed and you want to build Wishing Fountains on each of your seve
 You can tell Farmer Otto to perform *all* of those steps for you with this small script:
 
 ````
-farms = :home, :english, :lighthouse, :winter,
-        :hawaiian, :jade, :haunted
+farms = :home, :english, :lighthouse, :winter, :hawaiian, :jade, :haunted
 
 current_farm :home
 
