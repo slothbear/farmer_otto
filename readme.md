@@ -29,11 +29,10 @@ You'll need 546 drill bits, 273 copper tubes, and 273 cut bamboos. That's a lot 
 
 Maybe you're crazed and you want to build Wishing Fountains on each of your seven farms. That would require 7,644 crafted items.
 
-You can tell Farmer Otto to perform *all* of those steps for you with this small script:
+You can tell Farmer Otto to perform *all* of those steps for you with this script:
 
 ````
 farms = :home, :english, :lighthouse, :winter, :hawaiian, :jade, :haunted
-
 current_farm :home
 
 farms.each do |farm|
