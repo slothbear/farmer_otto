@@ -28,4 +28,10 @@ craftshops:
 
 zoom_out: [675, 460]
 
+make_it_top: [688, 220]
+make_it_middle: [688, 355]
+make_it_bottom: [688, 488]
+
+craft_get_it_1: [190, 128]
+craft_down: [444, 567]
 craftshop_close: [732, 30]

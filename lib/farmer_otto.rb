@@ -49,6 +49,19 @@ class FarmerOtto
       click :craft_get_it_1
       sleep CRAFT_WAIT
 
+    when :drill_bit
+      click :make_it_middle
+      sleep CRAFT_WAIT
+
+    when :copper_tube
+      click :make_it_bottom
+      sleep CRAFT_WAIT
+
+    when :cut_bamboo
+      click :craft_down; sleep 0.1
+      click :make_it_top
+      sleep CRAFT_WAIT
+
     when :close
       click :craftshop_close
       sleep 0.5
