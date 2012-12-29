@@ -63,8 +63,16 @@ class FarmerOtto
   # point is the absolute x/y on the screen to click
 
   def click(spot, wait_time=0.0)
+    print "click #{spot.inspect}:"
     pause?
-    offset = @settings.fetch(spot.to_s)
+
+    if spot.kind_of?(Symbol) || spot.kind_of?(String)
+      offset = @settings.fetch(spot.to_s)
+    elsif spot.kind_of?(Array)
+      offset = spot
+    else
+      raise "Unable to click: #{spot.inspect}"
+    end
 
     point = [origin[0]+offset[0], origin[1]+offset[1]]
     puts "click #{spot}: #{point.inspect}"
@@ -111,6 +119,13 @@ class FarmerOtto
   def caps_lock?
     tk = java.awt.Toolkit.getDefaultToolkit
     tk.getLockingKeyState(java.awt.event.KeyEvent::VK_CAPS_LOCK)
+  end
+
+  def look_inside(item)
+    click item
+    sleep 0.5
+    click [item[0]+47, item[1]+10]
+    sleep 4.0
   end
 
 end
