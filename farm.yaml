@@ -15,3 +15,23 @@ spot1: [170, 515]
 spot2: [395, 515]
 spot3: [620, 515]
 spot_featured: [400, 310]
+
+craftshops:
+  home: [202, 120]
+  english: [115, 202]
+  lighthouse: [198, 130]
+  winter: [478, 205]
+  hawaiian: [478, 314]
+  jade: [620, 345]
+  haunted: [268, 115]
+  mistletoe: [395, 268]
+
+zoom_out: [675, 460]
+
+make_it_top: [688, 220]
+make_it_middle: [688, 355]
+make_it_bottom: [688, 488]
+
+craft_get_it_1: [190, 128]
+craft_down: [444, 567]
+craftshop_close: [732, 30]

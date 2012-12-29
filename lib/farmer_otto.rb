@@ -3,6 +3,7 @@ require 'java'
 
 FARMVILLE_COM_WIDTH = 770
 FARMVILLE_COM_HEIGHT = 600
+CRAFT_WAIT = 10.0
 
 class FarmerOtto
 
@@ -31,11 +32,43 @@ class FarmerOtto
   end
 
   def current_farm(farm)
-    @current_farm = farm
+    @current_farm = farm || :home
   end
 
-  def craftshop(*args)
-    puts "craft shop performing: #{args.inspect}"
+  def craftshop(request)
+    puts "craftshop (#{@current_farm}: #{request})"
+
+    case request
+
+    when :look_inside
+      zoom_out
+      shop = @settings.fetch('craftshops').fetch(@current_farm.to_s)
+      look_inside shop
+
+    when :get_it
+      click :craft_get_it_1
+      sleep CRAFT_WAIT
+
+    when :drill_bit
+      click :make_it_middle
+      sleep CRAFT_WAIT
+
+    when :copper_tube
+      click :make_it_bottom
+      sleep CRAFT_WAIT
+
+    when :cut_bamboo
+      click :craft_down; sleep 0.1
+      click :make_it_top
+      sleep CRAFT_WAIT
+
+    when :close
+      click :craftshop_close
+      sleep 0.5
+
+    else
+      raise "unrecognized request: #{request}"
+    end
   end
 
   private
@@ -49,11 +82,19 @@ class FarmerOtto
   # point is the absolute x/y on the screen to click
 
   def click(spot, wait_time=0.0)
+    print "click #{spot.inspect}:"
     pause?
-    offset = @settings.fetch(spot.to_s)
+
+    if spot.kind_of?(Symbol) || spot.kind_of?(String)
+      offset = @settings.fetch(spot.to_s)
+    elsif spot.kind_of?(Array)
+      offset = spot
+    else
+      raise "Unable to click: #{spot.inspect}"
+    end
 
     point = [origin[0]+offset[0], origin[1]+offset[1]]
-    puts "click #{spot}: #{point.inspect}"
+    puts "#{point.inspect}"
 
     @robot.mouseMove(point[0], point[1])
     @robot.delay(200+rand(25))
@@ -97,6 +138,19 @@ class FarmerOtto
   def caps_lock?
     tk = java.awt.Toolkit.getDefaultToolkit
     tk.getLockingKeyState(java.awt.event.KeyEvent::VK_CAPS_LOCK)
+  end
+
+  def look_inside(item)
+    click item
+    sleep 0.5
+    click [item[0]+47, item[1]+10]
+    sleep 4.0
+  end
+
+  def zoom_out
+    10.times { click :zoom_out }
+    # really need 8
+    # extra times don't hurt, might help: switch to FV window
   end
 
 end
