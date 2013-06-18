@@ -18,16 +18,16 @@ class FarmerOtto
     instance_eval(File.read(path), path)
   end
 
-  def travel_to(farm)
-    return if farm == @current_farm
-    puts "travelling to #{farm}"
+  def travel_to_next_farm
+    # Farms are ordered by most recently used
+    # Assume we want to loop back to least
+    # recently used.
 
     click :travel_button
-    get_route_to(farm).each do |step|
-      click step, 1.0
-    end
+    sleep 1.0
+    8.times { click :right }
+    click :spot3
 
-    @current_farm = farm
     sleep 14.0
   end
 
@@ -72,10 +72,6 @@ class FarmerOtto
   end
 
   private
-
-  def get_route_to(farm)
-    @settings.fetch('routes').fetch(farm.to_s)
-  end
 
   # spot is a named spot on the farm (@settings from farm.yaml)
   # offset is the x/y offset from the farm's origin
