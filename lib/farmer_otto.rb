@@ -13,8 +13,6 @@ class FarmerOtto
   end
 
   def run_script(path)
-    puts "sleeping for 5 seconds..."
-    sleep 5.0
     instance_eval(File.read(path), path)
   end
 
