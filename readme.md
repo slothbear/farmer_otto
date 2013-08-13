@@ -31,7 +31,8 @@ lot of clicking *Make It* and *Get It*. For top production, you'll also want
 to craft on all of your farms. That's a lot of coordinated clicking to move
 through all the farms, crafting on each one.
 
-Maybe you're crazed and want the 2.4 million coins, coconuts, and jade from
+Maybe you're crazed and want the :moneybag:
+2.4 million coins :moneybag:, coconuts, and jade from
 Wishing Fountains on **all** of your twelve farms. That will require 13,340
 crafted items.
 
