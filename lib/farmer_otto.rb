@@ -16,16 +16,16 @@ class FarmerOtto
     instance_eval(File.read(path), path)
   end
 
-  def travel_to_next_farm
-    # Farms are ordered by most recently used
-    # Assume we want to loop back to least
-    # recently used.
+  # Farms are ordered by most recently used
+  # Assume we want to loop back to least recently used.
+  # Manually visit HG to make it the most recently used, then travel
+  # to the other farms by visiting the right-most farm.
 
+  def travel_to_least_recent_farm
     click :travel_button
     sleep 1.0
-    8.times { click :right }
+    least_recent_farm_clicks.times { click :right }
     click :spot3
-
     sleep 14.0
   end
 
@@ -144,7 +144,27 @@ class FarmerOtto
   def zoom_out
     10.times { click :zoom_out }
     # really need 8
-    # extra times don't hurt, might help: switch to FV window
+    # extra times don't hurt, might help by auto-switching into FV window
+  end
+
+  # How many standard farms are there?
+  # answer: total numnber of farms minus Hanging Gardens and the Featured Farm
+
+  # This count is used when we want to perform an action on every standard
+  # farm: Buy Goods, Harvest Wishing Fountain, Craft Drill Bits.
+
+  # Standard farm: All farms that can be reached via the row of three
+  # farms in the travel dialog, except for Hanging Gardens. The Featured
+  # farm (big box at top of dialog) is not counted as a standard farm.
+  # Future version: include the Featured Farm in our travel plans.
+
+  def standard_farm_count
+    @standard_farm_count ||= farm_count-2
+  end
+
+  def least_recent_farm_clicks
+    standard_farm_count - 3   # 3 farms displayed when dialog appears
+  end
 
   def farm_count
     @farm_count ||= @settings['farm_codes'].keys.size
