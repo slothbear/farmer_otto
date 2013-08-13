@@ -23,8 +23,8 @@ class FarmerOtto
 
   def travel_to_least_recent_farm
     click :travel_button, 1.0
-    least_recent_farm_clicks.times { click :right }
-    click :spot3, 14.0
+    least_recent_farm_clicks.times { click :travel_right }
+    click :travel_spot_3, 14.0
   end
 
   def current_farm(farm)

@@ -19,11 +19,11 @@ farm_codes:
 
 # Travelling from farm to farm
 travel_button: [750, 22]
-right: [738, 450]
-spot1: [170, 515]
-spot2: [395, 515]
-spot3: [620, 515]
-spot_featured: [400, 310]
+travel_right: [738, 450]
+travel_spot_1: [170, 515]
+travel_spot_2: [395, 515]
+travel_spot_3: [620, 515]
+travel_featured: [400, 310]
 
 # farm control panel buttons (stuff at lower right)
 zoom_out: [675, 460]
