@@ -1,10 +1,5 @@
-farms = :home, :english, :lighthouse, :winter,
-        :hawaiian, :jade, :haunted
-
-current_farm :home
-
-farms.each do |farm|
-  travel_to farm
+standard_farm_count.times do
+  travel_to_least_recent_farm
 
   craftshop :look_inside
   2.times do
