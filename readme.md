@@ -53,9 +53,13 @@ standard_farm_count.times do
 end
 ```
 
-Farmer Otto uses the conventions of the Ruby programming language to specify what Otto should do. Some of it might look a little geeky, but there are only a few concepts you need to learn. Check the Wiki for tutorials.
+Farmer Otto uses the conventions of the Ruby programming language to specify
+what Otto should do. Some of it might look a little geeky, but there are only
+a few concepts you need to learn. Check the [[Wiki]] for tutorials.
 
-Still too hard? Let me know; perhaps we can make it even simpler.  If someone else has already written a script for your task, you might not have to learn anything -- just run it.
+Still too hard? Let me know; perhaps we can make it even simpler.  If someone
+else has already written a script for your task, you might not have to learn
+anything – just run the script.
 
 ## prerequisites
 
