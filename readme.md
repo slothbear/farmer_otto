@@ -27,32 +27,37 @@ For instance, you might want to craft the items required to fully build your
 [Wishing Fountain](http://farmville.wikia.com/wiki/Wishing_Fountain).
 You'll need 546 drill bits, 273 copper tubes, and 273 cut bamboos. That's a lot of clicking *Make It* and *Get It*. For top production, you'll also want to craft on all of your farms. That's a lot of coordinated clicking to move through all the farms.
 
-Maybe you're crazed and you want to build Wishing Fountains on each of your seven farms. That would require 7,644 crafted items.
+Maybe you're crazed and you want to build Wishing Fountains on each of your
+twelve farms. That will require 13,104 crafted items.
 
 You can tell Farmer Otto to perform *all* of those steps for you with this script:
 
 ```ruby
+standard_farm_count.times do
+  travel_to_least_recent_farm
+  craftshop :open
 
-farms = :home, :english, :lighthouse, :winter, :hawaiian, :jade, :haunted
-current_farm :home
+  8.times do
+    craftshop :get_it
+  end
 
-farms.each do |farm|
-  travel_to farm
+  # Make twice as many drill bits since a Wishing Fountain stage
+  # requires 8 drill bits, 4 cut bamboos, and 4 copper tubes.
+  4.times do
+    craftshop :drill_bit
+  end
 
-  craftshop :look_inside
-  3.times { craftshop :get_it }
+  2.times do
+    craftshop :cut_bamboo
+  end
 
-  craftshop :drill_bit
-  craftshop :copper_tube
-  craftshop :cut_bamboo
+  2.times do
+    craftshop :copper_tube
+  end
 
   craftshop :close
 end
 ```
-
-**Note**: *Farmville now allows multiple units of the same
-item to be crafted in the same Craftshop... so the example
-script needs some refactoring.*
 
 Farmer Otto uses the conventions of the Ruby programming language to specify what Otto should do. Some of it might look a little geeky, but there are only a few concepts you need to learn. Check the Wiki for tutorials.
 
