@@ -38,31 +38,33 @@ class FarmerOtto
 
     case request
 
-    when :look_inside
-      zoom_out
-      shop = @settings.fetch('craftshops').fetch(@current_farm.to_s)
-      look_inside shop
+    when :open
+      click :building_button, 0.4
+      click :craftshop_button, 5.0
 
     when :get_it
-      click :craft_get_it_1
-      sleep CRAFT_WAIT
+      click :craft_get_it, CRAFT_WAIT
 
+    # This is totally broken, since we need the parts category navigation
+    # once, but the crafting 8 times.
+    # TODO: split the action into 2 parts (select drill bit, make drill bit)
+    # or pass a count into :drill_bit and do the craft looping there.
     when :drill_bit
-      click :make_it_middle
-      sleep CRAFT_WAIT
+      # click :parts_category, :extra_hard (do we still need :extra_hard click?)
+      click :parts_category, CRAFT_WAIT
+      2.times do
+        click :craft_right_arrow, CRAFT_WAIT
+      end
+      click :craft_drill_bit, CRAFT_WAIT
 
     when :copper_tube
-      click :make_it_bottom
-      sleep CRAFT_WAIT
+      # TODO
 
     when :cut_bamboo
-      click :craft_down; sleep 0.1
-      click :make_it_top
-      sleep CRAFT_WAIT
+      # TODO
 
     when :close
-      click :craftshop_close
-      sleep 0.5
+      click :craftshop_close, 0.5
 
     else
       raise "unrecognized request: #{request}"
