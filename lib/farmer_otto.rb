@@ -145,6 +145,9 @@ class FarmerOtto
     10.times { click :zoom_out }
     # really need 8
     # extra times don't hurt, might help: switch to FV window
+
+  def farm_count
+    @farm_count ||= @settings['farm_codes'].keys.size
   end
 
 end
