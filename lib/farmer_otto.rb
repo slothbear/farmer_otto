@@ -31,12 +31,8 @@ class FarmerOtto
     click :travel_spot_3, 14.0
   end
 
-  def current_farm(farm)
-    @current_farm = farm || :home
-  end
-
   def craftshop(request)
-    puts "craftshop (#{@current_farm}: #{request})"
+    puts "craftshop (#{request})"
 
     case request
 
