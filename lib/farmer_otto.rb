@@ -4,6 +4,7 @@ require 'java'
 FARMVILLE_COM_WIDTH = 770
 FARMVILLE_COM_HEIGHT = 600
 CRAFT_WAIT = 10.0
+DEBUG = false
 
 class FarmerOtto
 
@@ -78,6 +79,10 @@ class FarmerOtto
   def click(spot, wait_time=0.0)
     print "click #{spot.inspect}:"
     pause?
+    if DEBUG
+      puts
+      return
+    end
 
     if spot.kind_of?(Symbol) || spot.kind_of?(String)
       offset = @settings.fetch(spot.to_s)
