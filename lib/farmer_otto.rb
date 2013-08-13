@@ -31,8 +31,8 @@ class FarmerOtto
     click :travel_spot_3, 14.0
   end
 
-  def craftshop(request)
-    puts "craftshop (#{request})"
+  def craftshop(request, options={})
+    puts "craftshop (#{request}, #{options.inspect})"
 
     case request
 
@@ -43,17 +43,16 @@ class FarmerOtto
     when :get_it
       click :craft_get_it, CRAFT_WAIT
 
-    # This is totally broken, since we need the parts category navigation
-    # once, but the crafting 8 times.
-    # TODO: split the action into 2 parts (select drill bit, make drill bit)
-    # or pass a count into :drill_bit and do the craft looping there.
     when :drill_bit
       # click :parts_category, :extra_hard (do we still need :extra_hard click?)
       click :parts_category, CRAFT_WAIT
       2.times do
         click :craft_right_arrow, CRAFT_WAIT
       end
-      click :craft_drill_bit, CRAFT_WAIT
+
+      count = options[:count].to_i
+      count.times { click :craft_drill_bit, CRAFT_WAIT }
+      click :craft_item_close
 
     when :copper_tube
       # TODO
