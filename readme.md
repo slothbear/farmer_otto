@@ -51,9 +51,9 @@ standard_farm_count.times do
 
   # Make twice as many drill bits since a Wishing Fountain stage
   # requires 15 drill bits, 8 cut bamboos, and 8 copper tubes.
-  craftshop :drill_bit, :count => 4
-  craftshop :cut_bamboo, :count => 2
-  craftshop :copper_tube, :count => 2
+  craftshop :drill_bit,   count: 4
+  craftshop :cut_bamboo,  count: 2
+  craftshop :copper_tube, count: 2
 
   craftshop :close
 end
@@ -74,4 +74,4 @@ page on the Wiki.
 ## prerequisites
 
 0. Java 5 or later
-0. JRuby 1.6.5.1 or later
+0. JRuby 1.7 or later
