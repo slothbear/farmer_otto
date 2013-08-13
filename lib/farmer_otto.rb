@@ -22,11 +22,9 @@ class FarmerOtto
   # to the other farms by visiting the right-most farm.
 
   def travel_to_least_recent_farm
-    click :travel_button
-    sleep 1.0
+    click :travel_button, 1.0
     least_recent_farm_clicks.times { click :right }
-    click :spot3
-    sleep 14.0
+    click :spot3, 14.0
   end
 
   def current_farm(farm)
@@ -137,10 +135,8 @@ class FarmerOtto
   end
 
   def look_inside(item)
-    click item
-    sleep 0.5
-    click [item[0]+47, item[1]+10]
-    sleep 4.0
+    click item, 0.5
+    click [item[0]+47, item[1]+10], 4.0
   end
 
   def zoom_out
