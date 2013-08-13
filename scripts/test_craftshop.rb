@@ -1,6 +1,8 @@
 current_farm :home
 
-3.times { craftshop :get_it }
+3.times do
+  craftshop :get_it
+end
 
 craftshop :drill_bit
 craftshop :copper_tube
