@@ -2,6 +2,21 @@
 # All coordinates assume the minimum Farmville farm size. See
 # the Farmer Otto wiki regarding farm.yaml for details.
 
+farm_codes:
+  HF: Home Farm
+  EC: English Countryside
+  LC: Lighthouse Cove
+  WW: Winter Wonderland
+  HP: Hawaiian Paradise
+  JF: Jade Falls
+  HH: Haunted Hollow
+  ML: Mistletoe Lane
+  EG: Enchanted Glen
+  AT: Atlantis
+  AU: Australia
+  CP: Celestial Pastures
+  SA: Sweet Acres
+
 # Travelling from farm to farm
 travel_button: [750, 22]
 right: [738, 450]
@@ -32,19 +47,3 @@ make_it_bottom: [688, 488]
 
 craft_get_it_1: [190, 128]
 craft_down: [444, 567]
-
-
-farm_codes:
-  HF: Home Farm
-  EC: English Countryside
-  LC: Lighthouse Cove
-  WW: Winter Wonderland
-  HP: Hawaiian Paradise
-  JF: Jade Falls
-  HH: Haunted Hollow
-  ML: Mistletoe Lane
-  EG: Enchanted Glen
-  AT: Atlantis
-  AU: Australia
-  CP: Celestial Pastures
-  SA: Sweet Acres
