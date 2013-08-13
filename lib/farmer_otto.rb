@@ -11,10 +11,13 @@ class FarmerOtto
   def initialize
     @settings = YAML::load_file('farm.yaml')
     @robot = java.awt.Robot.new
+    @click_count = 0
   end
 
   def run_script(path)
     instance_eval(File.read(path), path)
+    puts "----- WRAP UP"
+    puts "total clicks: #{@click_count}"
   end
 
   # Farms are ordered by most recently used
@@ -77,6 +80,7 @@ class FarmerOtto
   # point is the absolute x/y on the screen to click
 
   def click(spot, wait_time=0.0)
+    @click_count += 1
     print "click #{spot.inspect}:"
     pause?
     if DEBUG
