@@ -56,7 +56,7 @@ end
 Farmer Otto uses the conventions of the Ruby programming language to specify
 what Otto should do. Some of it might look a little geeky, but there are only
 a few concepts you need to learn. Check the
-[[Wiki|Ruby-concepts-you-need-to-know]]
+[[Wiki|RubyConceptsYouNeedToKnow]]
 for some hints.
 
 Still too hard? Let me know; perhaps we can make it even simpler.  If someone
