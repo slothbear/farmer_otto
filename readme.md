@@ -29,14 +29,13 @@ your
 You'll need 609 drill bits, 293 copper tubes, and 293 cut bamboos. That's a 
 lot of clicking *Make It* and *Get It*. For top production, you'll also want
 to craft on all of your farms. That's a lot of coordinated clicking to move
-through all the farms, crafting on each one. But you figure it's worth it to
-get 200,000 coins (plus Coconuts and Jade) each day.
+through all the farms, crafting on each one.
 
-Maybe you're crazed and you want to build Wishing Fountains on each of your
-twelve farms. That will require 13,340 crafted items, and produce 2.4 million
-coins a day.
+Maybe you're crazed and want the 2.4 million coins, coconuts, and jade from
+Wishing Fountains on **all** of your twelve farms. That will require 13,340
+crafted items.
 
-You can tell Farmer Otto to perform *all* of those steps for you with this script:
+You can tell Farmer Otto to craft all those items for you with this script:
 
 ```ruby
 standard_farm_count.times do
@@ -75,7 +74,3 @@ page on the Wiki.
 
 0. Java 5 or later
 0. JRuby 1.6.5.1 or later
-0. For the Wishing Fountain script, sufficient bushels for the number of items you wish to craft:
-  * drill bit: 3 raspberry, 2 pumpkin, 1 apple wood
-  * copper tube: 3 wheat, 3 spinach, 1 milk
-  * cut bamboo: 3 peanut, 4 cotton, 1 lemon
