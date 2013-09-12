@@ -1,3 +1,5 @@
+sleep 5.0
+
 standard_farm_count.times do
   travel_to_least_recent_farm
   craftshop :open
@@ -8,11 +10,14 @@ standard_farm_count.times do
     craftshop :get_it
   end
 
-  # Make twice as many drill bits since a Wishing Fountain stage
-  # requires 8 drill bits, 4 cut bamboos, and 4 copper tubes.
-  craftshop :drill_bit,   count: 4
-  craftshop :cut_bamboo,  count: 2
-  craftshop :copper_tube, count: 2
+  # A Wishing Fountain stage requires twice as many drill bits
+  # as the other parts; make parts in that proportion.
+  # craftshop :drill_bit,   count: 4
+  # craftshop :cut_bamboo,  count: 2
+  # craftshop :copper_tube, count: 2
+
+  # Making one kind of part at a time needs fewer kinds of bushels.
+  craftshop :drill_bit, count: 8
 
   craftshop :close
 end
