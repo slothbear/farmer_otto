@@ -3,7 +3,7 @@ require 'java'
 
 FARMVILLE_COM_WIDTH = 770
 FARMVILLE_COM_HEIGHT = 600
-CRAFT_WAIT = 10.0
+CRAFT_WAIT = 2.0
 DEBUG = false
 
 class FarmerOtto
@@ -42,22 +42,19 @@ class FarmerOtto
 
     when :get_it
       click :craft_get_it, CRAFT_WAIT
+      click :craft_close_share, 1.0
 
-    when :drill_bit
+    when :drill_bit, :copper_tube, :cut_bamboo
       click :parts_category, CRAFT_WAIT, :extra_hard
       2.times do
         click :craft_right_arrow, CRAFT_WAIT
       end
 
+      selected_craft = "select_#{request}"
+      click selected_craft, 2.0
       count = options[:count].to_i
-      count.times { click :craft_drill_bit, CRAFT_WAIT }
+      count.times { click :craft_make_it, CRAFT_WAIT }
       click :craft_item_close
-
-    when :copper_tube
-      # TODO
-
-    when :cut_bamboo
-      # TODO
 
     when :close
       click :craftshop_close, 0.5
