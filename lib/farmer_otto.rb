@@ -44,8 +44,7 @@ class FarmerOtto
       click :craft_get_it, CRAFT_WAIT
 
     when :drill_bit
-      # click :parts_category, :extra_hard (do we still need :extra_hard click?)
-      click :parts_category, CRAFT_WAIT
+      click :parts_category, CRAFT_WAIT, :extra_hard
       2.times do
         click :craft_right_arrow, CRAFT_WAIT
       end
@@ -74,7 +73,7 @@ class FarmerOtto
   # offset is the x/y offset from the farm's origin
   # point is the absolute x/y on the screen to click
 
-  def click(spot, wait_time=0.0)
+  def click(spot, wait_time=0.0, extra_hard=false)
     @click_count += 1
     print "click #{spot.inspect}:"
     pause?
@@ -98,6 +97,7 @@ class FarmerOtto
     @robot.delay(200+rand(25))
     @robot.mousePress(java.awt.event.InputEvent::BUTTON1_MASK)
     @robot.delay(25)
+    @robot.delay(25) if extra_hard
     @robot.mouseRelease(java.awt.event.InputEvent::BUTTON1_MASK)
     @robot.delay(100)
     @robot.delay(rand(100))
