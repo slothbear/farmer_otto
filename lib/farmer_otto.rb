@@ -99,8 +99,8 @@ class FarmerOtto
     @robot.mouseMove(point[0], point[1])
     @robot.delay(200+rand(25))
     @robot.mousePress(java.awt.event.InputEvent::BUTTON1_MASK)
-    @robot.delay(25)
-    @robot.delay(25) if extra_hard
+    @robot.delay(50)
+    @robot.delay(100) if extra_hard
     @robot.mouseRelease(java.awt.event.InputEvent::BUTTON1_MASK)
     @robot.delay(100)
     @robot.delay(rand(100))
