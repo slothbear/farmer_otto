@@ -46,6 +46,7 @@ craft_item_close: [590, 214]
 select_drill_bit: [216, 518] #row 2 column 1
 select_copper_tube: [438, 518] #row 2 column 2
 select_cut_bamboo: [660, 518] #row 3 column 3
+select_large_crowbar: [438, 386]
 # click_or [216, 519] # lucky penny, row 2 column 1
 # click_or [660, 519] # row 2 column 3 (copper tube)
 

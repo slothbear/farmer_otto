@@ -44,16 +44,22 @@ class FarmerOtto
       click :craft_get_it, CRAFT_WAIT
       click :craft_close_share, 1.0
 
-    when :drill_bit, :copper_tube, :cut_bamboo
+    when :drill_bit, :copper_tube, :cut_bamboo, :large_crowbar
       click :parts_category, CRAFT_WAIT, :extra_hard
-      2.times do
+      click :parts_category, CRAFT_WAIT, :extra_hard
+
+      craft_page = request == :large_crowbar ? 3 : 2
+      craft_page.times do
         click :craft_right_arrow, CRAFT_WAIT
       end
 
       selected_craft = "select_#{request}"
       click selected_craft, 2.0
       count = options[:count].to_i
-      count.times { click :craft_make_it, CRAFT_WAIT }
+      count.times do
+        click :craft_make_it, CRAFT_WAIT
+        click :craft_close_share, 1.0
+      end
       click :craft_item_close
 
     when :close
