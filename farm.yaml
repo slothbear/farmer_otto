@@ -28,7 +28,7 @@ travel_featured: [400, 310]
 # farm control panel buttons (stuff at lower right)
 zoom_out: [675, 460]
 building_button: [647, 566]
-craftshop_button: [610, 510]
+craftshop_button: [671, 445]
 
 # Craftshop
 craftshop_close: [722, 65]
