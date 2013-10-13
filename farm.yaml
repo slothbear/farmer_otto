@@ -57,3 +57,12 @@ make_it_bottom: [688, 488]
 
 craft_get_it_1: [190, 128]
 craft_down: [444, 567]
+
+# Apothecary (blue bubble brew leader board)
+harvest_brewing_cauldron: [122, 242]
+harvest_spellbook: [237, 255]
+harvest_dragon_brewer: [115, 380]
+make_blue_bubble_brew: [630, 170]
+harvest_apprentice_enchanter: [232, 375]
+make_dream_draft: [630, 170]
+

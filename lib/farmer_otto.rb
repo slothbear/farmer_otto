@@ -31,6 +31,10 @@ class FarmerOtto
     click :travel_spot_3, 14.0
   end
 
+  def apothecary(request)
+    click request, 2.0
+  end
+
   def craftshop(request, options={})
     puts "craftshop (#{request}, #{options.inspect})"
 
