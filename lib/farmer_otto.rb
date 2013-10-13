@@ -35,6 +35,10 @@ class FarmerOtto
     click request, 2.0
   end
 
+  def elite_horses(request)
+    click request, 2.0
+  end
+
   def craftshop(request, options={})
     puts "craftshop (#{request}, #{options.inspect})"
 
