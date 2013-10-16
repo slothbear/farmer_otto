@@ -66,17 +66,15 @@ make_blue_bubble_brew: [630, 170]
 harvest_apprentice_enchanter: [232, 375]
 make_dream_draft: [630, 170]
 
-# Elite Horses (Feeding Stall leader board)
+# Elite Horses
 feed_wagon: [185, 531]
-feeding_stall: [165, 185]
-eh_make: [600, 181]
-
-# Elite Horses (Hoof Polish leader board)
 water_pump: [85, 535]
 fabric_roll_barrel: [385, 535]
-horse_groom: [285, 535]
+
+feeding_stall: [165, 185]
 water_shed: [80, 185]
 grooming_stable: [245, 185]
+horse_groom: [285, 535]
+
+eh_make: [600, 181]
 eh_make_2: [600, 315]
-
-
