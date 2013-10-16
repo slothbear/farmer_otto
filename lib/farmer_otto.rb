@@ -20,6 +20,16 @@ class FarmerOtto
     puts "total clicks: #{@click_count}"
   end
 
+  def wait(minutes)
+    puts "wait: #{minutes} minutes"
+    sleep minutes*60
+
+    if minutes >= 1  # fuzz factor for longer operations
+      puts "wait: additional 5 seconds"
+      sleep 5
+    end
+  end
+
   # Farms are ordered by most recently used
   # Assume we want to loop back to least recently used.
   # Manually visit HG to make it the most recently used, then travel

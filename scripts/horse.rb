@@ -4,17 +4,19 @@
 # Feed Wagon is ready (2 min)
 # 1 Feed already in Stable Loft
 
-sleep 5.0
+wait 0.1
+elite_horses :eh_activate_farmville_window
+
 count = 5
+count.times do |run_number|
+  elite_horses :feed_wagon, :water_pump
+  # 2 minutes for feed&water, +1 for
+  # previous Apple Carrot Crate to ready
+  wait 3
 
-count.times do
-  elite_horses :feed_wagon
-  elite_horses :feeding_stall
-  elite_horses :feeding_stall
-  elite_horses :eh_make
+  elite_horses :feeding_stall unless run_number == 0 # HARVEST
 
-  sleep 124.0
-
-  elite_horses :feed_wagon
-  sleep 184.0
+  elite_horses :feed_wagon, :water_pump
+  elite_horses :feeding_stall, :eh_make_2
+  wait 2
 end
