@@ -11,9 +11,10 @@ sleep 5.0
 count = 10
 
 count.times do
-  apothecary :harvest_spellbook
-  apothecary :harvest_dragon_brewer
-  apothecary :harvest_dragon_brewer
-  apothecary :make_blue_bubble_brew
+  apothecary :harvest_spellbook,
+    :harvest_dragon_brewer,
+    :harvest_dragon_brewer,
+    :make_blue_bubble_brew
+
   sleep 184.0
 end

@@ -31,12 +31,12 @@ class FarmerOtto
     click :travel_spot_3, 14.0
   end
 
-  def apothecary(request)
-    click request, 2.0
+  def apothecary(*request)
+    click_list request
   end
 
-  def elite_horses(request)
-    click request, 2.0
+  def elite_horses(*request)
+    click_list request
   end
 
   def craftshop(request, options={})
@@ -181,6 +181,13 @@ class FarmerOtto
 
   def farm_count
     @farm_count ||= @settings['farm_codes'].keys.size
+  end
+
+  def click_list(list)
+    list.each do |point|
+      click point, 2.0
+      puts "sleep 2.0"
+    end
   end
 
 end
