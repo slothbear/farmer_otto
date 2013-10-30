@@ -68,6 +68,8 @@ make_dream_draft: [630, 170]
 
 # Elite Horses
 eh_activate_farmville_window: [380, 35]
+# first tab of many
+close_farmville_tab: [119, 46]
 feed_wagon: [185, 531]
 water_pump: [85, 535]
 fabric_roll_barrel: [385, 535]

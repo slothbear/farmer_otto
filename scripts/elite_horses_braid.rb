@@ -46,3 +46,5 @@ count.times do |run_number|
 
   wait 3 # for horse_groom at top of list
 end
+
+close_farmville_tab

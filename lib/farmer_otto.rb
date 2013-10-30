@@ -20,12 +20,19 @@ class FarmerOtto
     puts "total clicks: #{@click_count}"
   end
 
+  def close_farmville_tab
+    # TODO: the point (close_fv_window) should know it is absolute
+    click :close_farmville_tab, 999
+  end
+
   def wait(minutes)
     puts "wait: #{minutes} minutes"
     sleep minutes*60
 
     if minutes >= 1  # fuzz factor for longer operations
-      puts "wait: additional 5 seconds"
+      # And alert user to reactivate Farmville window
+      system 'say "10 seconds"'
+      puts "wait: additional 10 seconds"
       sleep 5
     end
   end
@@ -99,7 +106,7 @@ class FarmerOtto
     print "click #{spot.inspect}:"
     pause?
     if DEBUG
-      puts
+      puts spot
       return
     end
 
@@ -111,7 +118,11 @@ class FarmerOtto
       raise "Unable to click: #{spot.inspect}"
     end
 
-    point = [origin[0]+offset[0], origin[1]+offset[1]]
+    point = if wait_time == 999
+      offset # TODO: this is no longer an offset.
+    else
+      [origin[0]+offset[0], origin[1]+offset[1]]
+    end
     puts "#{point.inspect}"
 
     @robot.mouseMove(point[0], point[1])
