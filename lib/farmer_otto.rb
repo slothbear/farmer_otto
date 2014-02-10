@@ -79,7 +79,6 @@ class FarmerOtto
 
     when :get_it
       click :craft_get_it, CRAFT_WAIT
-      click :craft_close_share, 1.0
 
     when :drill_bit, :copper_tube, :cut_bamboo, :large_crowbar
       click :parts_category, CRAFT_WAIT, :extra_hard

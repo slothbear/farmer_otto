@@ -36,7 +36,6 @@ craftshop_button: [672, 380]
 # Craftshop
 craftshop_close: [722, 65]
 craft_get_it: [135, 197]
-craft_close_share: [560, 151]
 # TODO: parts_category needs :extra_hard, or does it? experiment.
 parts_category: [157, 288]
 craft_right_arrow: [732, 441]
