@@ -38,7 +38,7 @@ class FarmerOtto
   end
 
   def activate_farm
-    click [580, -15]
+    click [580, -15], 1.0
   end
 
   # Farms are ordered by most recently used
