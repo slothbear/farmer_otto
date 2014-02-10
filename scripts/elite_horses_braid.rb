@@ -14,7 +14,7 @@
 # Fabric Roll Barrel is ready (Fabric, 3 min)
 
 wait 0.1
-elite_horses :eh_activate_farmville_window
+activate_farm
 
 # Riding Arena only holds 5 goods
 count = 5

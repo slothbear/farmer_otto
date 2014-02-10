@@ -5,7 +5,7 @@
 # 1 Feed already in Stable Loft
 
 wait 0.1
-elite_horses :eh_activate_farmville_window
+activate_farm
 
 count = 5
 count.times do |run_number|
