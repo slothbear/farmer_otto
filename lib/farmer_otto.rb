@@ -3,7 +3,7 @@ require 'java'
 
 FARMVILLE_COM_WIDTH = 770
 FARMVILLE_COM_HEIGHT = 600
-CRAFT_WAIT = 2.0
+CRAFT_WAIT = 2.5
 DEBUG = false
 
 class FarmerOtto
@@ -75,7 +75,7 @@ class FarmerOtto
 
       craft_page = request == :large_crowbar ? 3 : 2
       craft_page.times do
-        click :craft_right_arrow, CRAFT_WAIT
+        click :craft_right_arrow, 1.0
       end
 
       selected_craft = "select_#{request}"
