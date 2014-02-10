@@ -81,3 +81,17 @@ horse_groom: [285, 535]
 
 eh_make: [600, 181]
 eh_make_2: [600, 315]
+
+# Hollybright
+holiday_wheelbarrow: [185, 500]
+feeding_enclosure: [180, 180]
+hollybright_make_1: [600, 160]
+
+# Jungle Hideaway
+jungle_wild_fruit_tree: [185, 505]
+jungle_feather_nest: [288, 505]
+jungle_tree_grove: [185, 134]
+jungle_bird_roost: [288, 134]
+jungle_gold_mine: [580, 510]
+jungle_make_1: [600, 160]
+

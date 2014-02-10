@@ -60,6 +60,14 @@ class FarmerOtto
     click_list request
   end
 
+  def jungle_hideaway(*request)
+    click_list request
+  end
+
+  def hollybright(*request)
+    click_list request
+  end
+
   def craftshop(request, options={})
     puts "craftshop (#{request}, #{options.inspect})"
 
