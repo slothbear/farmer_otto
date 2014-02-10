@@ -37,6 +37,10 @@ class FarmerOtto
     end
   end
 
+  def activate_farm
+    click [580, -15]
+  end
+
   # Farms are ordered by most recently used
   # Assume we want to loop back to least recently used.
   # Manually visit HG to make it the most recently used, then travel
