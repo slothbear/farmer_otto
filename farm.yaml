@@ -16,6 +16,9 @@ farm_codes:
   AU: Australia
   CP: Celestial Pastures
   SA: Sweet Acres
+  MG: Mystical Groves
+  HL: Holiday Lights
+  FE: Fields of El Dorado
 
 # Travelling from farm to farm
 travel_button: [750, 22]
