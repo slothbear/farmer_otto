@@ -46,10 +46,14 @@ class FarmerOtto
   # Manually visit HG to make it the most recently used, then travel
   # to the other farms by visiting the right-most farm.
 
+  # There are currently 15 plowable farms.
+  # Minus 3 for the farms displayed when travel dialog appears.
+  # Divided by 3 per screen. # => magic number 4
+  # Upon the next new farm, it will be Magic 5 +  travel_spot_1.
   def travel_to_least_recent_farm
     click :travel_button, 1.0
-    least_recent_farm_clicks.times { click :travel_right }
-    click :travel_spot_3, 14.0
+    4.times { click :travel_right, 0.5 }
+    click :travel_spot_3, 20.0
   end
 
   def apothecary(*request)
@@ -209,10 +213,6 @@ class FarmerOtto
 
   def standard_farm_count
     @standard_farm_count ||= farm_count-2
-  end
-
-  def least_recent_farm_clicks
-    standard_farm_count - 3   # 3 farms displayed when dialog appears
   end
 
   def farm_count
