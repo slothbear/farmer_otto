@@ -98,7 +98,6 @@ class FarmerOtto
       count = options[:count].to_i
       count.times do
         click :craft_make_it, CRAFT_WAIT
-        click :craft_close_share, 1.0
       end
       click :craft_item_close
 
