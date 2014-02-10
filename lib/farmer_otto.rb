@@ -107,6 +107,10 @@ class FarmerOtto
     end
   end
 
+  def close_farm_cash_offer
+    click [576, 88], 1.0
+  end
+
   private
 
   # spot is a named spot on the farm (@settings from farm.yaml)
