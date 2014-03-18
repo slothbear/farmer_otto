@@ -44,6 +44,7 @@ class FarmerOtto
   end
 
   def activate_farm
+    wait 0.1
     click [580, -15], 1.0
   end
 
