@@ -45,9 +45,7 @@ standard_farm_count.times do
 
   # If your craftshop has fewer than 8 stations, the extra
   # get_it clicks will land in neutral space.
-  8.times do
-    craftshop :get_it
-  end
+  craftshop :get_it, count: 8
 
   # Make twice as many drill bits since a Wishing Fountain stage
   # requires 15 drill bits, 8 cut bamboos, and 8 copper tubes.
