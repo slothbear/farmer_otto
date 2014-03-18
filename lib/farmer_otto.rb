@@ -74,6 +74,7 @@ class FarmerOtto
 
   def craftshop(request, options={})
     puts "craftshop (#{request}, #{options.inspect})"
+    count = options[:count] || 1
 
     case request
 
