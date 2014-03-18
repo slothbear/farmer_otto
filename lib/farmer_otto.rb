@@ -77,6 +77,17 @@ class FarmerOtto
     click_list request
   end
 
+  def get_craft_item_spot(item)
+    # row 1: [x, 386] 2: [x, 518]
+    # col 1: [216, y], 2: [438, y], 3: [660, y]
+    xs = [216, 438, 660]
+    ys = [386, 518]
+    h = @settings.fetch(item.to_s)
+    x = xs[h["column"]-1]
+    y = ys[h["row"]-1]
+    return h["page"], [x, y]
+  end
+
   def craftshop(request, options={})
     puts "craftshop (#{request}, #{options.inspect})"
     count = options[:count] || 1
@@ -88,24 +99,34 @@ class FarmerOtto
       click :craftshop_button, 5.0
 
     when :get_it
-      click :craft_get_it, CRAFT_WAIT
+      count.times do
+        click :craft_get_it, CRAFT_WAIT
+        click :craft_close_share, 1.0
+      end
 
-    when :drill_bit, :copper_tube, :cut_bamboo, :large_crowbar
-      click :parts_category, CRAFT_WAIT, :extra_hard
-      click :parts_category, CRAFT_WAIT, :extra_hard
+    when :drill_bit, :copper_tube, :cut_bamboo, :two_large_fuels, :farmhand
+      case request
+      when :two_large_fuels, :farmhand
+        category = :consumables_category
+      else
+        category = :parts_category
+      end
 
-      craft_page = request == :large_crowbar ? 3 : 2
-      craft_page.times do
+      click category, CRAFT_WAIT, :extra_hard
+      click category, CRAFT_WAIT, :extra_hard
+
+      page, spot = get_craft_item_spot(request)
+
+      # We're already on page one, so subtract 1.
+      (page-1).times do
         click :craft_right_arrow, 1.0
       end
+      click spot, 2.0
 
-      selected_craft = "select_#{request}"
-      click selected_craft, 2.0
-      count = options[:count].to_i
       count.times do
         click :craft_make_it, CRAFT_WAIT
+        click :craft_close_share, 1.0
       end
-      click :craft_item_close
 
     when :close
       click :craftshop_close, 0.5

@@ -45,19 +45,18 @@ craftshop_close: [722, 65]
 craft_get_it: [135, 197]
 # TODO: parts_category needs :extra_hard, or does it? experiment.
 parts_category: [157, 288]
+consumables_category: [227, 288]
 craft_right_arrow: [732, 441]
 craft_make_it: [562, 370]
 craft_item_close: [590, 214]
 
-# row 1: [x, 386] 2: [x, 518]
-# col 1: [216, y], 2: [438, y], 3: [660, y]
+drill_bit:   {page: 5, row: 1, column: 3}
+copper_tube: {page: 7, row: 1, column: 1}
+cut_bamboo:  {page: 8, row: 2, column: 2}
+farmhand:    {page: 1, row: 1, column: 1}
+two_large_fuels: {page: 2, row: 2, column: 2}
 
-select_drill_bit: [216, 518] #row 2 column 1
-select_copper_tube: [438, 518] #row 2 column 2
-select_cut_bamboo: [660, 518] #row 3 column 3
-select_large_crowbar: [438, 386]
-# click_or [216, 519] # lucky penny, row 2 column 1
-# click_or [660, 519] # row 2 column 3 (copper tube)
+craft_close_share: [555, 145]
 
 # Craftshop legacy, still usable in Hanging Gardens
 make_it_top: [688, 220]
