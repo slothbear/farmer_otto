@@ -4,7 +4,7 @@ require 'java'
 FARMVILLE_COM_WIDTH = 770
 FARMVILLE_COM_HEIGHT = 600
 CRAFT_WAIT = 2.5
-DEBUG = false
+$DEBUG = false
 
 class FarmerOtto
 
@@ -150,7 +150,7 @@ class FarmerOtto
     @click_count += 1
     print "click #{spot.inspect}:"
     pause?
-    if DEBUG
+    if $DEBUG
       puts spot
       return
     end
