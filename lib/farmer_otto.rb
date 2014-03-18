@@ -79,6 +79,10 @@ class FarmerOtto
     click_list request
   end
 
+  def farmers_square(*request)
+    click_list request
+  end
+
   def get_craft_item_spot(item)
     # row 1: [x, 386] 2: [x, 518]
     # col 1: [216, y], 2: [438, y], 3: [660, y]
