@@ -8,10 +8,15 @@ DEBUG = false
 
 class FarmerOtto
 
-  def initialize
+  def initialize(args)
+    @args = args
     @settings = YAML::load_file('farm.yaml')
     @robot = java.awt.Robot.new
     @click_count = 0
+  end
+
+  def args
+    @args
   end
 
   def run_script(path)
