@@ -102,6 +102,15 @@ jungle_bird_roost: [288, 134]
 jungle_gold_mine: [580, 510]
 jungle_make_1: [600, 160]
 
+# Tin Man Fountain
+tm_feeding_stall: [120, 495]
+tm_feeding_enclosure: [130, 160]
+tm_make_1: [600, 160]
+tm_play_area: [20, 65]
+tm_sell_1: [220, 345]
+tm_accept: [300, 380]
+tm_close_play_area: [670, 123]
+
 # Farmer's Square
 lumber_mill: [275, 255]
 supply_shop: [320, 240]

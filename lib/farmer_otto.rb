@@ -79,6 +79,10 @@ class FarmerOtto
     click_list request
   end
 
+  def tin_man_fountain(*request)
+    click_list request
+  end
+
   def farmers_square(*request)
     click_list request
   end
