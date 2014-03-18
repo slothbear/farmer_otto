@@ -141,6 +141,10 @@ class FarmerOtto
     click [576, 88], 1.0
   end
 
+  def debug(switch=true)
+    $DEBUG = switch
+  end
+
   private
 
   # spot is a named spot on the farm (@settings from farm.yaml)
