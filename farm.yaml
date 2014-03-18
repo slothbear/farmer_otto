@@ -19,6 +19,13 @@ farm_codes:
   MG: Mystical Groves
   HL: Holiday Lights
   FE: Fields of El Dorado
+  EV: Emerald Valley
+
+side_farms:
+  SM: Sunflower Meadows
+  AP: Angler's Pond
+  HG: Hanging Gardens
+  FS: Farmer's Square
 
 # Travelling from farm to farm
 travel_button: [750, 22]
