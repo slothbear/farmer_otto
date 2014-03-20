@@ -154,6 +154,10 @@ class FarmerOtto
     $DEBUG = switch
   end
 
+  def harvest_basic_nail
+    click :fs_supply_shop
+  end
+
   private
 
   # spot is a named spot on the farm (@settings from farm.yaml)
