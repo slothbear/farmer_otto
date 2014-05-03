@@ -20,6 +20,7 @@ farm_codes:
   HL: Holiday Lights
   FE: Fields of El Dorado
   EV: Emerald Valley
+  MR: Mediterranean Riviera
 
 side_farms:
   SM: Sunflower Meadows
@@ -104,16 +105,35 @@ jungle_make_1: [600, 160]
 
 # Tin Man Fountain
 tm_title_bar: [300, 40]
-tm_feeding_stall: [120, 495]
-tm_feeding_enclosure: [130, 160]
 tm_make_1: [600, 160]
 tm_make_2: [600, 295]
 tm_play_area: [20, 65]
 tm_sell_1: [220, 345]
 tm_accept: [300, 380]
 tm_close_play_area: [670, 123]
-tm_enchantment_pool: [30, 505]
-tm_water_enclosure: [30, 160]
+tm_enchantment_pool:  [30, 505]
+tm_water_enclosure:   [30, 160]
+tm_feeding_stall:     [130, 495]
+tm_feeding_enclosure: [130, 160]
+tm_winkie_rookery:    [220, 505]
+tm_rookery_enclosure: [220, 160]
+
+# Azure Emporium (Mediterranean Riviera)
+ae_water_fountain: [82, 500]
+ae_feeding_trough: [180, 500]
+ae_masonry_block: [280, 500]
+ae_wooden_loom: [375, 500]
+
+ae_feeding_enclosure: [180, 144]
+ae_masonry_enclosure: [280, 144]
+
+ae_play_area: [55, 70]
+ae_title_bar: [400, 40]
+ae_make_1: [600, 185]
+ae_make_2: [600, 320]
+ae_close_play_area: [673, 134]
+ae_sell_1: [225, 355]
+ae_sell_accept: [300, 390]
 
 # Farmer's Square
 lumber_mill: [275, 255]
