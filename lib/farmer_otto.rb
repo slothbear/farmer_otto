@@ -35,9 +35,9 @@ class FarmerOtto
     sleep minutes*60
 
     if minutes >= 1  # fuzz factor for longer operations
-      # And alert user to reactivate Farmville window
-      additional_time = 15
-      system %[say "#{additional_time} seconds"]
+                     # And alert user to reactivate Farmville window
+      additional_time = 5
+      system %[say "#{additional_time}"]
       puts "wait: additional #{additional_time} seconds"
       sleep additional_time
     end
