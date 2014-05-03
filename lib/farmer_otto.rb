@@ -45,7 +45,7 @@ class FarmerOtto
 
   def activate_farm
     wait 0.1
-    click [580, -15], 1.0
+    click [700, -20], 1.0
   end
 
   # Farms are ordered by most recently used
