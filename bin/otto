@@ -20,12 +20,13 @@ if ARGV.empty?
   puts option_parser.help
   exit 1
 else
-  script = ARGV[0]
+  args = ARGV.dup
+  script = args.shift
   unless File.exist?(script)
     puts "script file '#{script}' not found"
     exit 1
   end
 end
 
-otto = FarmerOtto.new
+otto = FarmerOtto.new(args)
 otto.run_script(script)
