@@ -124,8 +124,10 @@ ae_feeding_trough: [180, 500]
 ae_masonry_block: [280, 500]
 ae_wooden_loom: [375, 500]
 
+ae_fountain_enclosure: [80, 144]
 ae_feeding_enclosure: [180, 144]
 ae_masonry_enclosure: [280, 144]
+ae_loom_enclosure:    [380, 144]
 
 ae_play_area: [55, 70]
 ae_title_bar: [400, 40]
