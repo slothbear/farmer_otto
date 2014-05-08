@@ -269,7 +269,8 @@ class FarmerOtto
 
   def click_list(list)
     list.each do |point|
-      click point, 2.0
+      extra_hard = (point == :lumber_mill_tab || point == :supply_shop_tab)
+      click point, 2.0, extra_hard
       puts "sleep 2.0"
     end
   end
