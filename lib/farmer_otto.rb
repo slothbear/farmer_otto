@@ -206,7 +206,7 @@ class FarmerOtto
     end
 
     if spot.kind_of?(Symbol) || spot.kind_of?(String)
-      offset = @settings.fetch(spot.to_s)
+      offset = fetch_spot(spot)
     elsif spot.kind_of?(Array)
       offset = spot
     else
@@ -230,6 +230,14 @@ class FarmerOtto
     @robot.delay(rand(100))
 
     sleep wait_time
+  end
+
+  def fetch_spot(spot)
+    if @environment
+      @settings.fetch(@environment).fetch(spot.to_s)
+    else
+      @settings.fetch(spot.to_s)
+    end
   end
 
   def origin
