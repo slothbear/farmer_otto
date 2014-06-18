@@ -11,9 +11,8 @@
 # Carpenters Nails produced in Carpenters Hut
 # Carpenters Nails = 2 Oasis Water + 2 Wooden Beams (10 min)
 
+# need a verb or directive here? "environment arabian_stallions"?
 arabian_stallions
-puts "first_run: #{first_run}"
-puts "last_run: #{last_run}"
 
 harvest :mineral_spring
 harvest :oasis_grove
@@ -27,6 +26,6 @@ harvest_and_sell :carpenters_hut unless first_run
 open :carpenters_hut
 make :carpenters_nails
 
-# 10 minutes for Carpenters Nails minus 3 to pre-make 1st water/beams
+# Carpenters Nails (10 min) minus 3 min to pre-make 1st batch of parts
 wait 7 unless last_run
 
