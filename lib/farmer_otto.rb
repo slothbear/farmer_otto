@@ -104,6 +104,10 @@ class FarmerOtto
     click_list request
   end
 
+  def arabian_stallions
+    @environment = "arabian_stallions"
+  end
+
   def azure_emporium(*request)
     click_list request
   end
@@ -190,6 +194,16 @@ class FarmerOtto
   alias_method :harvest, :click_wait
   alias_method :open, :click_wait
   alias_method :make, :click_wait
+
+  def harvest_and_sell(spot)
+    click_wait spot
+    click_wait :title_bar
+    click_wait :enclosure_pen
+    click_wait :sell
+    click_wait :accept
+    click_wait :close_enclosure_pen
+  end
+
   private
 
   # spot is a named spot on the farm (@settings from farm.yaml)

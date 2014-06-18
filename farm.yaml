@@ -159,3 +159,15 @@ as_enclosure_pen: [85, 75]
 as_sell_1: [225, 348]
 as_accept: [300, 385]
 as_close_enclosure_pen: [670, 130]
+
+arabian_stallions:
+  mineral_spring: [75, 498]
+  oasis_grove: [272, 498]
+  carpenters_hut: [272, 140]
+  carpenters_nails: [600, 162] #make_1
+  # internal-use keys
+  title_bar: [370, 40]
+  enclosure_pen: [90, 70]
+  sell: [225, 350]
+  accept: [300, 390]
+  close_enclosure_pen: [670, 130]
