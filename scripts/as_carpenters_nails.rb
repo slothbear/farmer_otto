@@ -26,6 +26,6 @@ harvest_and_sell :carpenters_hut unless first_run
 open :carpenters_hut
 make :carpenters_nails
 
-# Carpenters Nails (10 min) minus 3 min to pre-make 1st batch of parts
+# Carpenters Nails (10 min) minus 3 min to pre-make next parts
 wait 7 unless last_run
 
