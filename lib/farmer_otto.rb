@@ -19,6 +19,14 @@ class FarmerOtto
     @args
   end
 
+  def first_run
+    @run_number == 0
+  end
+
+  def last_run
+    @run_number == @count-1
+  end
+
   def run_script(path)
     @count = args.shift.to_i
     @count = 1 if @count == 0  # to_i returns 0 if arg is blank
