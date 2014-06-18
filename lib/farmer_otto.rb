@@ -20,8 +20,16 @@ class FarmerOtto
   end
 
   def run_script(path)
-    instance_eval(File.read(path), path)
+    @count = args.shift.to_i
+    @count = 1 if @count == 0  # to_i returns 0 if arg is blank
+    script = File.read(path)
+
     activate_farm
+    @count.times do |ix|
+      @run_number = ix
+      puts "beginning run #{ix+1}/#{@count}"
+      instance_eval(script, path)
+    end
     puts "----- WRAP UP"
     puts "total clicks: #{@click_count}"
   end
