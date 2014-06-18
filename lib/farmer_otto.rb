@@ -21,6 +21,7 @@ class FarmerOtto
 
   def run_script(path)
     instance_eval(File.read(path), path)
+    activate_farm
     puts "----- WRAP UP"
     puts "total clicks: #{@click_count}"
   end
