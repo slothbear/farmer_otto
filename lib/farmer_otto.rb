@@ -183,6 +183,13 @@ class FarmerOtto
     click :fs_supply_shop
   end
 
+  def click_wait(spot)
+    click spot, wait_time=2
+  end
+
+  alias_method :harvest, :click_wait
+  alias_method :open, :click_wait
+  alias_method :make, :click_wait
   private
 
   # spot is a named spot on the farm (@settings from farm.yaml)
