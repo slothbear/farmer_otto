@@ -83,6 +83,10 @@ class FarmerOtto
     click_list request
   end
 
+  def click_arabian_stallions(*request)
+    click_list request
+  end
+
   def azure_emporium(*request)
     click_list request
   end

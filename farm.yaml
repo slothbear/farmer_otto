@@ -150,3 +150,12 @@ childs_rocking_horse: [695, 340]
 supply_shop_screw: [490, 340]
 portable_chair: [555, 340]
 fs_supply_shop: [400, 275]
+
+# Oasis
+as_grazing_pasture: [172, 137]
+as_pasture: [172, 498]
+as_make_1: [600, 162]
+as_enclosure_pen: [85, 75]
+as_sell_1: [225, 348]
+as_accept: [300, 385]
+as_close_enclosure_pen: [670, 130]
