@@ -195,11 +195,10 @@ class FarmerOtto
   alias_method :open, :click_wait
   alias_method :make, :click_wait
 
-  def harvest_and_sell(spot)
-    click_wait spot
+  def sell(spot)
     click_wait :title_bar
     click_wait :enclosure_pen
-    click_wait :sell
+    click_wait spot  # designated sell spot within the enclosure pen
     click_wait :accept
     click_wait :close_enclosure_pen
   end

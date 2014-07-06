@@ -21,7 +21,10 @@ wait 3
 harvest :mineral_spring
 harvest :oasis_grove
 
-harvest_and_sell :carpenters_hut unless first_run
+unless first_run
+  harvest :carpenters_hut
+  sell :sell_spot_1
+end
 
 open :carpenters_hut
 make :carpenters_nails
