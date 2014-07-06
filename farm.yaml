@@ -21,6 +21,7 @@ farm_codes:
   FE: Fields of El Dorado
   EV: Emerald Valley
   MR: Mediterranean Riviera
+  OG: Oasis Gardens
 
 side_farms:
   SM: Sunflower Meadows
@@ -161,13 +162,28 @@ as_accept: [300, 385]
 as_close_enclosure_pen: [670, 130]
 
 arabian_stallions:
-  mineral_spring: [75, 498]
-  oasis_grove: [272, 498]
-  carpenters_hut: [272, 140]
+  mineral_spring: [75,  498]
+  pasture:        [174, 498]
+  oasis_grove:    [272, 498]
+  spinning_wheel: [370, 498]
+  desert_flowers: [468, 498]
+  rock_formation: [566, 498]
+  golden_garden:  [664, 498]
+
+  mini_aqueduct:   [75,  140]
+  grazing_pasture: [174, 140]
+  carpenters_hut:  [272, 140]
+  cotton_mill:     [370, 140]
+  dye_shop:        [468, 140]
+  jewellers_shop:  [566, 140]
+  treat_stall:     [664, 140]
+
   carpenters_nails: [600, 162] #make_1
+  navy_blue_dye:    [600, 295] #make_2
   # internal-use keys
   title_bar: [370, 40]
   enclosure_pen: [90, 70]
-  sell: [225, 350]
+  sell_spot_1: [225, 350]
+  sell_spot_5: [225, 500]
   accept: [300, 390]
   close_enclosure_pen: [670, 130]
