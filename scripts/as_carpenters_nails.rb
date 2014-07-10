@@ -30,5 +30,5 @@ open :carpenters_hut
 make :carpenters_nails
 
 # Carpenters Nails (10 min) minus 3 min to pre-make next parts
-wait 7 unless last_run
+wait 7 unless last_run?
 

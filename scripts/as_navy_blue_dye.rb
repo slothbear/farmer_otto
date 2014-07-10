@@ -12,21 +12,19 @@
 # need a verb or directive here? "environment arabian_stallions"?
 arabian_stallions
 
-# harvest :desert_flowers
-# wait 4
-# harvest :desert_flowers
-# wait 4
-# harvest :desert_flowers
+harvest :desert_flowers
+wait 4
+harvest :desert_flowers
+wait 4
+harvest :desert_flowers
 
-puts "first run is: #{first_run}"
-
-unless first_run
-  # harvest :dye_shop
+unless first_run?
+  harvest :dye_shop
   sell :sell_spot_5
 end
 
-# open :dye_shop
-# make :navy_blue_dye
+open :dye_shop
+make :navy_blue_dye
 
 # Navy Blue Dye (240 min) minus 8 min to pre-make next parts
-wait 232 unless last_run
+wait 232 unless last_run?

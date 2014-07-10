@@ -19,11 +19,11 @@ class FarmerOtto
     @args
   end
 
-  def first_run
+  def first_run?
     @run_number == 0
   end
 
-  def last_run
+  def last_run?
     @run_number == @count-1
   end
 
