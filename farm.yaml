@@ -179,6 +179,8 @@ arabian_stallions:
   treat_stall:     [664, 140]
 
   carpenters_nails: [600, 162] #make_1
+  wooden_trellice:  [600, 162]
+  cotton_scarves:   [600, 162]
   navy_blue_dye:    [600, 295] #make_2
   # internal-use keys
   title_bar: [370, 40]

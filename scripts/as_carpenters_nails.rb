@@ -21,7 +21,7 @@ wait 3
 harvest :mineral_spring
 harvest :oasis_grove
 
-unless first_run
+unless first_run?
   harvest :carpenters_hut
   sell :sell_spot_1
 end
