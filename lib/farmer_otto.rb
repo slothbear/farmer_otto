@@ -1,6 +1,8 @@
 require 'yaml'
 require 'java'
 
+java_import 'javax.imageio.ImageIO'
+
 FARMVILLE_COM_WIDTH = 770
 FARMVILLE_COM_HEIGHT = 600
 CRAFT_WAIT = 2.5
@@ -233,6 +235,10 @@ class FarmerOtto
     end
     puts "#{point.inspect}"
 
+    if true  # temporary diagnosis of script issues
+      write_snapshot("snaps/#{@click_count}_#{spot}.png")
+    end
+
     @robot.mouseMove(point[0], point[1])
     @robot.delay(200+rand(25))
     @robot.mousePress(java.awt.event.InputEvent::BUTTON1_MASK)
@@ -275,6 +281,11 @@ class FarmerOtto
   def snapshot(rx, ry, rw, rh)
     field = java.awt.Rectangle.new(rx,ry,rw,rh)
     @robot.createScreenCapture(field)
+  end
+
+  def write_snapshot(filename)
+    buffered_image = snapshot(origin[0], origin[1], FARMVILLE_COM_WIDTH, FARMVILLE_COM_HEIGHT)
+    ImageIO.write(buffered_image, "png", java.io.File.new(filename))
   end
 
   def pause?
