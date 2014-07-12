@@ -32,6 +32,12 @@ harvest :spinning_wheel  # golden cotton #2
 wait 27                  # 30 minutes for trellice - 3 for cottons & beam
 
 harvest :carpenters_hut  # Wooden Trellice
+
+unless first_run?
+  harvest :cotton_mill
+  sell :sell_spot_1
+end
+
 open :cotton_mill
 make :cotton_scarves
 
