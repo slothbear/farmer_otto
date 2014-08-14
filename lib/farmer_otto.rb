@@ -110,6 +110,10 @@ class FarmerOtto
     @environment = "arabian_stallions"
   end
 
+  def magic_garden
+    @environment = "magic_garden"
+  end
+
   def azure_emporium(*request)
     click_list request
   end

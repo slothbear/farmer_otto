@@ -189,3 +189,33 @@ arabian_stallions:
   sell_spot_5: [225, 500]
   accept: [300, 390]
   close_enclosure_pen: [670, 130]
+
+magic_garden:
+  infinity_bird_bath: [75,  498]
+  magic_corals:        [174, 498]
+  fairy_mines:    [272, 498]
+  storybook_wishing_well: [370, 498]
+  rainbow_gold_pot: [468, 498]
+  spell_chest: [566, 498]
+  the_rabbit_hole:  [664, 498]
+
+  hanging_fountain:   [75,  140]
+  coral_works: [174, 140]
+  alchemist_hat:  [272, 140]
+  arcade_machine:     [370, 140]
+  golden_anvil:        [468, 140]
+  potions_cabinet:  [566, 140]
+  magic_purifier:     [664, 140]
+
+  high_score_card: [600, 295] #make_2
+  # [600, 162] #make_1
+  pixie_rabbit:  [600, 162] #make_1
+  # cotton_scarves:   [600, 162]
+  # navy_blue_dye:    [600, 295] #make_2
+  # internal-use keys
+  title_bar: [370, 40]
+  play_area: [90, 70]
+  sell_spot_1: [225, 350]
+  sell_spot_5: [225, 500]
+  accept: [300, 390]
+  close_play_area: [670, 130]
