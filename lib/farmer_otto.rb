@@ -203,10 +203,10 @@ class FarmerOtto
 
   def sell(spot)
     click_wait :title_bar
-    click_wait :enclosure_pen
+    click_wait :play_area #:enclosure_pen
     click_wait spot  # designated sell spot within the enclosure pen
     click_wait :accept
-    click_wait :close_enclosure_pen
+    click_wait :close_play_area
   end
 
   private
