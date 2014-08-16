@@ -210,6 +210,7 @@ magic_garden:
   high_score_card: [600, 295] #make_2
   # [600, 162] #make_1
   pixie_rabbit:  [600, 162] #make_1
+  light_ray_assimilator: [600, 162] #make_1
   # cotton_scarves:   [600, 162]
   # navy_blue_dye:    [600, 295] #make_2
   # internal-use keys
