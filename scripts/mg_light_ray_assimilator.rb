@@ -17,18 +17,18 @@ harvest :infinity_bird_bath
 open :hanging_fountain
 make :high_score_card             # takes 2 minutes
 wait 2
-harvest :hanging_fountain         # high score card
 
 harvest :storybook_wishing_well
 wait 3
 harvest :storybook_wishing_well
 
-# unless first_run?
+unless first_run?
   harvest :arcade_machine
   sell :sell_spot_1
-# end
+end
 
+harvest :hanging_fountain         # high score card
 open :arcade_machine
 make :light_ray_assimilator
 
-wait 120 unless last_run?
+wait (120-2-2-3) unless last_run?
