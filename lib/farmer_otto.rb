@@ -114,6 +114,10 @@ class FarmerOtto
     @environment = "magic_garden"
   end
 
+  def blackjack_barn
+    @environment = "blackjack_barn"
+  end
+
   def azure_emporium(*request)
     click_list request
   end
@@ -203,10 +207,10 @@ class FarmerOtto
 
   def sell(spot)
     click_wait :title_bar
-    click_wait :play_area #:enclosure_pen
-    click_wait spot  # designated sell spot within the enclosure pen
+    click_wait :stockroom #:play_area #:enclosure_pen
+    click_wait spot  # designated sell spot within the place
     click_wait :accept
-    click_wait :close_play_area
+    click_wait :close_stockroom
   end
 
   private

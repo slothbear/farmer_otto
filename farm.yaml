@@ -220,3 +220,21 @@ magic_garden:
   sell_spot_5: [225, 500]
   accept: [300, 390]
   close_play_area: [670, 130]
+
+blackjack_barn:
+  leaf_basket: [110, 554]
+  barn_fruit_tree: [208, 554]
+  mischief_pump: [306, 554]
+
+  sewing_machine: [110, 190]
+  spin_manure: [208, 190]
+  hallowed_fountain: [306, 190]
+
+  sprout_seed: [600, 160]
+  hallowed_water_flask: [600, 160]
+
+  title_bar: [370, 40]
+  stockroom: [136, 94]
+  sell_spot_1: [225, 350]
+  accept: [300, 390]
+  close_stockroom: [670, 130]
